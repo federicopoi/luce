@@ -24,4 +24,10 @@
  document.addEventListener('keydown',e=>{if(e.key==='Escape'){menu.setAttribute('aria-expanded','false');document.querySelector('#site-nav').classList.remove('open')}});
  const theme=document.getElementById('theme-toggle');function updateTheme(dark){document.body.classList.toggle('dark',dark);theme.setAttribute('aria-pressed',dark);theme.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');theme.innerHTML=dark?'☾ &nbsp; Dark':'☼ &nbsp; Light'};try{updateTheme(localStorage.getItem('luce-site-theme')==='dark')}catch{};theme.onclick=()=>{const dark=document.body.classList.toggle('dark');theme.setAttribute('aria-pressed',dark);theme.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');theme.innerHTML=dark?'☾ &nbsp; Dark':'☼ &nbsp; Light';try{localStorage.setItem('luce-site-theme',dark?'dark':'light')}catch{}};
  document.getElementById('copy-build').onclick=async e=>{try{await navigator.clipboard.writeText(document.querySelector('.build-details pre').textContent);e.target.textContent='Copied'}catch{e.target.textContent='Select the commands above'}};
+ document.querySelectorAll('[data-download]').forEach(link=>link.addEventListener('click',event=>{
+  if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+  document.getElementById('download-status').textContent='Your download is starting. Follow these steps once the DMG arrives.';
+  document.getElementById('install-guide').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
+  document.getElementById('install-title').focus({preventScroll:true});
+ }));
 })();
