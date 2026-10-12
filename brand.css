@@ -1,0 +1,81 @@
+/* Luce identity: native system typography, warm neutrals, and the app's yellow accent. */
+:root{--page:#f8f7f2;--ink:#252724;--muted:#70736b;--card:#efeee7;--line:#deded4;--accent:#ffc928;--red:#79600c;--site-font:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body{font-family:var(--site-font);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-weight:600}
+.brand{font-family:var(--site-font);font-size:26px;letter-spacing:-1.1px}
+.site-header{height:68px;background:var(--page);border-bottom:1px solid var(--line)}
+.site-header nav{margin-left:40px;font-size:13px;gap:26px}
+.site-header nav a{color:var(--muted)}
+.site-header nav a:hover{color:var(--ink)}
+.nav-actions{font-size:13px}
+.pill{border-radius:9px;font-size:14px;font-weight:500;padding:12px 20px;gap:12px}
+.pill.small{padding:7px 14px}
+.primary,.dark .primary{background:var(--accent);color:#292611}
+.primary:hover,.dark .primary:hover{background:#f3bd17}
+.secondary{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.secondary:hover{background:var(--card)}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline-color:#9b7b0d}
+.hero{padding-top:72px;text-align:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:500;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;margin-bottom:22px}
+.hero-eyebrow img{height:21px;width:21px}
+.hero h1{font-size:clamp(43px,4.5vw,64px);line-height:1.04;letter-spacing:-3.1px;font-weight:600;max-width:650px;margin:0 auto}
+.hero-description{font-size:19px;line-height:1.5;color:var(--muted);max-width:480px;margin:20px auto 0}
+.hero .hero-actions{justify-content:center;margin-top:28px}
+.hero-meta{font-size:12px;color:var(--muted);margin-top:18px}
+.hero-stage{height:720px;margin-top:46px;padding:32px 32px 56px;border-radius:20px;text-align:left;background-color:#eae7dc;background-image:url('/luce/assets/luce-field.svg');background-position:center;background-size:cover;border:1px solid var(--line)}
+.hero .native-demo{border-radius:11px;box-shadow:0 28px 60px #22251c25}
+.demo-note{font-size:11px;color:#535749;text-shadow:none;bottom:20px}
+.demo-note i{background:var(--accent)}
+.provider-strip{padding:40px 0 82px}
+.provider-strip>p{font-size:13px;color:var(--muted)}
+.provider-list>div{background:transparent;border:1px solid var(--line);border-radius:12px;font-size:20px}
+.feature{border-radius:16px;background:var(--card)}
+.feature-copy h2{font-size:28px;line-height:1.12;letter-spacing:-.8px}
+.feature-copy>p{font-size:20px}
+.text-link{font-weight:500;color:var(--red)}
+.feature-media{border-radius:10px}
+.scenic,.landscape-two{background-image:url('/luce/assets/luce-field.svg');background-color:#eae7dc}
+.account-stage,.history-stage{background:#dfdfd3}
+.remote-stage{background:#dddcc9}
+.media-caption{color:#535749;text-shadow:none}
+.eyebrow,.workflow-step-label{font-weight:500}
+#workflow>h2{font-weight:600;letter-spacing:-1.8px}
+#workflow .more-grid h3{font-weight:600}
+.principles>h2{font-weight:600;letter-spacing:-1.3px}
+.principle-grid h3{font-weight:600}
+.get-started>h2{font-weight:600;font-size:58px;letter-spacing:-2px}
+.build-details pre{font-family:"SFMono-Regular",Menlo,Monaco,monospace}
+footer{background:#eeeee5;border-top:1px solid var(--line)}
+.dark{--page:#191b18;--ink:#e9eae2;--muted:#a4a69a;--card:#242720;--line:#3d4035;--red:#e4c361}
+.dark .secondary{color:var(--ink)}
+.dark .hero-stage,.dark .scenic,.dark .landscape-two{background-color:#33382b;background-image:linear-gradient(#20261bd9,#20261bd9),url('/luce/assets/luce-field.svg')}
+.dark .demo-note,.dark .media-caption{color:#d2d5c8}
+.dark .account-stage,.dark .history-stage{background:#33382b;filter:none}
+.dark .remote-stage{background:#3b3e2e}
+.dark footer{background:#22251e}
+.dark .hero-eyebrow img{content:url('/luce/assets/luce-mark-dark.svg');filter:none}
+@media(max-width:1100px){.site-header nav{margin-left:0;gap:18px}.hero-stage{height:650px;padding:26px 26px 54px}.hero h1{letter-spacing:-2.2px}}
+@media(max-width:850px){.site-header nav{gap:14px;font-size:12px}.hero{padding-top:58px}.hero-stage{height:600px;padding:24px 20px 52px}.hero h1{font-size:56px}.feature-copy h2{font-size:24px}.feature-copy>p{font-size:18px}}
+@media(max-width:600px){.site-header{height:64px}.site-header nav{top:64px}.nav-actions>.small{padding:6px 11px}.hero{padding-top:44px}.hero-eyebrow{font-size:10px;letter-spacing:.04em;margin-bottom:20px;gap:7px}.hero-eyebrow img{width:18px;height:18px}.hero h1{font-size:43px;line-height:1.04;letter-spacing:-1.9px;max-width:350px}.hero-description{font-size:16px;line-height:1.5;margin-top:20px;max-width:330px}.hero .hero-actions{margin-top:24px;gap:9px}.hero .hero-actions .pill{font-size:13px;padding:11px 14px}.hero-meta{font-size:11px;margin-top:16px}.hero-stage{height:560px;margin-top:32px;padding:16px 12px 54px;border-radius:14px}.demo-note{font-size:10px;bottom:17px}.demo-note::after{color:#535749}.dark .demo-note::after{color:#d2d5c8}.provider-strip{padding:32px 0 50px}.provider-list>div{font-size:18px;border-radius:9px}.feature{border-radius:12px}.feature-copy h2{font-size:24px}.feature-copy>p{font-size:18px}.get-started>h2{font-size:42px;letter-spacing:-1.3px}.pill{border-radius:9px}}
+
+.brand img{width:90px;height:32px;max-width:none;object-fit:contain}
+.dark .brand img{content:url("/luce/assets/luce-wordmark-dark.svg");filter:none}
+
+/* Keep the original Cursor hero composition: compact, left aligned, roomy above. */
+.hero{padding-top:96px;text-align:left}
+.hero h1{font-size:26px;line-height:1.25;letter-spacing:-.45px;font-weight:400;max-width:610px;margin:0}
+.hero .hero-actions{justify-content:flex-start;margin-top:24px;gap:10px}
+.hero .hero-actions .pill{font-size:16px;font-weight:400;padding:10px 22px;border-radius:999px;line-height:1.5}
+.hero .hero-actions .primary{background:var(--ink);color:var(--page)}
+.hero .hero-actions .primary:hover{opacity:.9}
+.hero .hero-actions .secondary{background:var(--card);border:0;color:var(--ink)}
+.hero-stage{margin-top:54px}
+@media(max-width:850px){.hero h1{font-size:26px;letter-spacing:-.45px}}
+@media(max-width:650px){
+ .hero{padding-top:96px}
+ .hero h1{font-size:26px;line-height:1.16;letter-spacing:-.6px;max-width:350px}
+ .hero .hero-actions{margin-top:24px}
+ .hero .hero-actions .pill{font-size:16px;padding:10px 22px}
+ .hero .hero-actions .secondary{display:none}
+ .hero-stage{margin-top:54px}
+}
